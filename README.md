@@ -1,21 +1,21 @@
-## `Vae-Set:` &nbsp; A collection of experimental VAEs built on a robust foundational model
+## `Vae-Skltn:` &nbsp; A robust but simple extendable framework for building generative VAEs.
 
 <p align="center">
   <kbd>
   <img src="https://github.com/SB-27182/Vae_Set/blob/master/readme_images/topOfSeven.jpg" width=700 height=77 />
   </kbd>
   <br>
-  <sub>Here is a latent structure of about 60 variables, found to exist within the human handwriting of the number 7.<br> This is a normally distributed feature. <br> See Vae4 (below)</sub> 
+  <sub>Here is a latent structure of about 60 variables, found to exist within the human handwriting of the number 7.<br> The distribution of this feature is apparently normal. <br> See Vae4 (below)</sub> 
 </p>
 <br>
 <br>
 
 
 ## `Vae1:` &nbsp;
-Vae1 is a foundational model. It uses a multivariate Gaussian as the latent distribution and either a continuous-bernoulli or gaussian reconstruction density, depending on the data type.
+Vae1 is the main framework. It uses a multivariate Gaussian as the latent distribution and either a continuous-bernoulli or gaussian reconstruction density, depending on the data type.
 <br>
 <br>
-It is designed to be a very robust and explicit VAE model. This explicit coding style allows for significant access to the inner workings of the model. Thus, Vae1 can be quickly extended into novel experimental architectures. Below are some of the design choices that make this possible.
+The framework is intended to be robust and explicit in many ways. This explicit coding style allows for significant access to the inner workings of the model. Thus, Vae1 can be quickly extended into novel experimental architectures. Below are some of the design choices that make this possible.
 <br>
 <br>
 <br>
@@ -34,7 +34,7 @@ The latent probability layers/likelihoods are written explicitly. This reveals t
   <img src="https://github.com/SB-27182/Vae_Set/blob/master/readme_images/explicit_probs.png" width=480 height=268 />
   </kbd>
 </p>
-Disentanglement/Independent-Component-Analysis in this setting, are the consequences of an orthogonal vector basis. Naturally, this opens the door for many new theoretical modifications of the VAE. Another generalized vector space that has caused revolutionary developments in NLP is the Fourier space. Indeed, attention-based/transformer models use a frequency basis to encode latent signals of sequential data. There is a shared, mathematical core structure between transformers and VAEs. It seems direct hybrid models (as opposed to rather in-direct models like DallE) are possible. 
+Disentanglement/Independent-Component-Analysis in this setting, are the consequences of an orthogonal vector basis. Naturally, this opens the door for many new theoretical modifications of the VAE. Another generalized vector space that has caused revolutionary developments in NLP is the Fourier space. Indeed, attention-based/transformer models appear to use a frequency basis to encode latent signals of sequential data. There is a shared, mathematical core structure between transformers and VAEs. Perhaps hybrid models (as opposed to rather in-direct models like DallE) are possible. 
 <br>
 
 
@@ -57,7 +57,7 @@ However in real life, there are often many "states" that the generator function 
 But that's neither here nor there, the point is these "states" exist in data.
 <br>
 <br>
-To a geometer, these would be described as "discrete structures" in the manifold. To a statistician, the data would be described as multi-modal, or "clustered". At anyrate, Vae4 uses a categorical, multivariate gaussian joint-density as the latent probability distribution to  <ins>**learn this manifold without the use of any labels.**</ins>
+To a geometer, these would be described as "discrete structures" in the manifold. To a statistician, the data would be described as multi-modal, that is, having multiple modes, ie: "clustered". At anyrate, Vae4 uses a categorical, multivariate gaussian joint-density as the latent probability distribution to  <ins>**learn this manifold without the use of any labels.**</ins>
 <br>
 <br>
 
