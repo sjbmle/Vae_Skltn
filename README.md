@@ -1,4 +1,4 @@
-## `Vae-Skltn:` &nbsp; A robust but simple extendable framework for building generative VAEs.
+## `Vae-Skltn:` &nbsp; A simple extendable framework for building generative VAEs.
 
 <p align="center">
   <kbd>
